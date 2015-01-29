@@ -16,6 +16,9 @@
      
       
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to 'New Competition', new_competition_path %></li>
+        <% end %>
         <li><a href="/pages/about">About</a></li>
         <li><a href="#">Link</a></li>
          

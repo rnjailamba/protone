@@ -1,42 +1,23 @@
-
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Competitions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Description</th>
-      <th>Collegename</th>
-      <th>Money</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div id="comp">
     <% @competitions.each do |competition| %>
-      <tr>
-        <td><%= competition.name %></td>
-        <td><%= competition.user.email if competition.user%></td>
-        <td><%= competition.description %></td>
-        <td><%= competition.collegename %></td>
-        <td><%= competition.money %></td>
-        <td><%= link_to 'Show', competition %></td>
+      <div class="box panel panel-default">
+        <div class="panel-body">
+          <%= competition.name %>
+          <%= competition.user.email if competition.user%>
+          <%= competition.description %>
+          <%= competition.collegename %>
+          <%= competition.money %>
+          <%= link_to 'Show', competition %>
 
-        <% if competition.user == current_user %>
-          <td><%= link_to 'Edit', edit_competition_path(competition) %></td>
-          <td><%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+          <% if competition.user == current_user %>
+            <%= link_to 'Edit', edit_competition_path(competition) %>
+            <%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
 
-      </tr>
+
     <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Competition', new_competition_path %>
-<% end %>
+</div>
+  
 
