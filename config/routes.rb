@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get  'pages/about'
+
   resources :competitions
 
   devise_for :users
