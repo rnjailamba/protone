@@ -5,7 +5,7 @@ class CompetitionsController < ApplicationController
   respond_to :html
 
   def index
-    @competitions = Competition.all.order("created_at DESC")
+    @competitions = Competition.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 1)
     respond_with(@competitions)
   end
 
