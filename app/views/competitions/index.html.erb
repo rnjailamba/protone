@@ -3,15 +3,17 @@
       <div class="box panel panel-default">
         <div class="panel-body">
           <%= competition.name %>
-          <%= competition.user.email if competition.user%>
-          <%= competition.description %>
-          <%= competition.collegename %>
-          <%= competition.money %>
+          <%= competition.user.email if competition.user%><br/>
+          <%= competition.description %><br/>
+          <%= competition.collegename %><br/>
+          <%= competition.money %><br/>
           <%= link_to 'Show', competition %>
 
           <% if competition.user == current_user %>
-            <%= link_to 'Edit', edit_competition_path(competition) %>
-            <%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <div class="actions">
+              <%= link_to 'Edit', edit_competition_path(competition) %>
+              <%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
           <% end %>
         </div>
       </div>

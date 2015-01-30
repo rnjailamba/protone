@@ -1,25 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @competition.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @competition.description %>
-</p>
-
-<p>
-  <strong>Collegename:</strong>
-  <%= @competition.collegename %>
-</p>
-
-<p>
-  <strong>Money:</strong>
-  <%= @competition.money %>
-</p>
-<% if @competition.user == current_user %>
-  <%= link_to 'Edit', edit_competition_path(@competition)%>
-<% end %>|
 <%= link_to 'Back', competitions_path %>
+<div class = "row">
+	<div class="col-md-offset-2 col-md-8">
+	  <div class="panel panel-default">
+      	<div class="panel-heading center">
+			<p>
+			  <strong>Name:</strong>
+			  <%= @competition.name %>
+			</p>
+		</div>
+		<div class="panel-body">
+			<p>
+			  <strong>Description:</strong>
+			  <%= @competition.description %>
+			</p>
+
+			<p>
+			  <strong>Collegename:</strong>
+			  <%= @competition.collegename %>
+			</p>
+
+			<p>
+			  <strong>Money:</strong>
+			  <%= @competition.money %>
+			</p>
+			<% if @competition.user == current_user %>
+			  <%= link_to 'Edit', edit_competition_path(@competition)%>
+			<% end %>
+		</div>
+
+	   </div>
+	</div>
+</div>
+

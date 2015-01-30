@@ -5,7 +5,7 @@ class CompetitionsController < ApplicationController
   respond_to :html
 
   def index
-    @competitions = Competition.all
+    @competitions = Competition.all.order("created_at DESC")
     respond_with(@competitions)
   end
 
