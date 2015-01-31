@@ -2,7 +2,7 @@ class CompetitionsController < ApplicationController
   before_action :set_competition, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  respond_to :html
+respond_to :html, :json
 
   def index
     @competitions = Competition.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
@@ -49,6 +49,6 @@ class CompetitionsController < ApplicationController
     end
 
     def competition_params
-      params.require(:competition).permit(:name, :description, :collegename, :money)
+      params.require(:competition).permit(:name,:category, :description, :collegename, :money)
     end
 end

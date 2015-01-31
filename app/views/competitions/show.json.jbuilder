@@ -1,1 +1,1 @@
-json.extract! @competition, :id, :name, :description, :collegename, :money, :created_at, :updated_at
+json.extract! @competition, :id, :name, :description, :category,:collegename, :money, :created_at, :updated_at
