@@ -6,4 +6,5 @@ $ ->
  
     $('#comp').masonry
       isOriginLeft: false
+      isFitWidth: true
       itemSelector: '.masonry-item'

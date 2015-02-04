@@ -20,5 +20,3 @@
 //= require masonry/jquery.masonry
 
 
-
-
