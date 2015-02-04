@@ -19,12 +19,13 @@
 
         <li >
           <p class="createComp"><a href="/competitions/new" class="btn btn-success btn-small" ><font color="white">Create Competition</font></a> </p></li>
-        <li><a href="/pages/about">Sign up</a></li>
+        
 
         <% if user_signed_in? %>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><a href="#">Log in</a></li>
+          <li><a href="/users/sign_up">Sign up</a></li>
+          <li><a href="/users/sign_in">Log in</a></li>
         <% end %>
          
       </ul>

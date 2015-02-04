@@ -28,3 +28,24 @@
     <%= render "devise/shared/links" %>
   </div>
 </div>
+
+<h1>Float Labels</h1>
+<form class="go-bottom">
+  <div class="labelWrap">
+    <input id="fname" name="fname" type="text" required>
+    <label for="fname">First Name</label>
+  </div>
+  <div class="labelWrap">
+    <input id="lname" name="lname" type="text" required>
+    <label for="lname">Last Name</label>
+  </div>
+  <div class="labelWrap">
+    <input id="add" name="add" type="text" required>
+    <label for="add">Your Address</label>
+  </div>
+  <div class="labelWrap">
+    <input id="phone" name="phone" type="tel" required>
+    <label for="phone">Primary Phone</label>
+  </div>
+  <input type="submit">
+</form>

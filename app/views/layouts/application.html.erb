@@ -16,6 +16,7 @@
 	<%= render 'layouts/header' %>
   <% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-success alert-block fade in") %>
+     <a class="close" data-dismiss="alert">x</a>
   <% end %>
 
 	<div class="container mainContent">

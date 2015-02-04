@@ -14,7 +14,7 @@ $brand-primary:                                    #c0392b;
 $jumbotron-bg:                                         white;
 
 
-/* universal */
+/* universal*/
 
 .mainContent{
   
@@ -50,6 +50,20 @@ textarea {
 }
 
 /* typography */
+.signUp{
+  font-size: 35px;
+line-height: 40px;
+font-weight: 700;
+color: #404040;
+letter-spacing: 0.4px;
+}
+.mainHead{
+  font-size: 35px;
+line-height: 40px;
+font-weight: 700;
+color: #404040;
+letter-spacing: 0.4px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   
@@ -115,5 +129,9 @@ footer ul li {
 .createComp{
 	margin-top:0px;
 }	
-/*masonry*/
+/*tabbable*/
+.tabbable img.thumbnail {
+   margin: 0 20px 10px 0;
+    }
 
+/*form new user*/
