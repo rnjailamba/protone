@@ -5,5 +5,5 @@
 $ ->
  
     $('#comp').masonry
-      itemSelector: '.box'
-      isFitWidth: true
+      isOriginLeft: false
+      itemSelector: '.masonry-item'

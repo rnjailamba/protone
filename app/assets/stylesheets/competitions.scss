@@ -3,10 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #comp {
   margin: 0 auto;
+
 }
 
-.box {
-  margin: 5px;
-  width: 214px;
-}
 
+.masonry-item {
+  margin: 15px;
+  width: 300px;
+  height:324px;
+  background-color: #e74c3c;
+  border: 4px solid #ccc;
+}

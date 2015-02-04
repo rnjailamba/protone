@@ -6,16 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= render 'layouts/shim' %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  <![endif]-->
 </head>
 <body>
 	<%= render 'layouts/header' %>
   <% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "alert alert-info") %>
+     <%= content_tag(:div, msg, class: "alert alert-success alert-block fade in") %>
   <% end %>
 
-	<div class="container">
+	<div class="container mainContent">
           <%= yield %>
-     </div>
+
+  </div>
+  <%= render 'layouts/footer' %>
+
+
 
 </body>
 </html>

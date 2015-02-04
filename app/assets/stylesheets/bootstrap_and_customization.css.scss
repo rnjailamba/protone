@@ -1,3 +1,8 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 $body-bg:                                                   #e0f0f1;
@@ -8,12 +13,107 @@ $navbar-default-brand-color:      #c0392b;
 $brand-primary:                                    #c0392b;
 $jumbotron-bg:                                         white;
 
-@import 'bootstrap';
+
+/* universal */
+
+.mainContent{
+  
+}
+
+html {
+  overflow-y: scroll;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
 
 .center {
-     text-align: center;
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
 }
 
 .navbar-brand {
      font-weight: bold;
 }
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+ul.unstyled{
+	list-style:none;
+	padding:0;
+}
+/* header */
+
+.global-head{
+	background: white;
+	border-bottom:2px solid #95a5a6;
+}
+
+
+/* footer */
+
+
+footer {
+  background: #39424e;
+  margin-top: 45px;
+  padding: 20px;
+  border-top: 5px solid #2c3e50;
+   color: #555;
+   font-size:15px;
+}
+
+footer a {
+ 
+}
+
+footer a:hover {
+  
+}
+
+footer small {
+  
+}
+
+footer ul {
+ 
+}
+
+footer ul li {
+ 
+}
+
+/* button */
+.createComp{
+	margin-top:0px;
+}	
+/*masonry*/
+

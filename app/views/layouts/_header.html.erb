@@ -1,33 +1,34 @@
-<nav class="navbar navbar-static-top navbar-default" role="navigation">
+<nav class="navbar navbar-static-top navbar-default global-head" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">CFL</a>
+      <a class="navbar-brand" href="/">CMPETE!</a>
     </div>
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search competions">
+        </div>
+       
+    </form>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      
       
       <ul class="nav navbar-nav navbar-right">
-        
-          <li><%= link_to 'New Competition', new_competition_path %></li>
-        
-        <li><a href="/pages/about">About</a></li>
+
+        <li >
+          <p class="createComp"><a href="/competitions/new" class="btn btn-success btn-small" ><font color="white">Create Competition</font></a> </p></li>
+        <li><a href="/pages/about">Sign up</a></li>
 
         <% if user_signed_in? %>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">Log in</a></li>
         <% end %>
          
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+

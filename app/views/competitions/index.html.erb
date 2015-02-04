@@ -1,6 +1,7 @@
-<div id="comp">
+<div id="comp" class="row">
+
     <% @competitions.each do |competition| %>
-      <div class="box panel panel-default">
+      <div class="masonry-item ">
         <div class="panel-body">
           <%= competition.name %>
           <%= competition.user.email if competition.user%><br/>
