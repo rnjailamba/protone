@@ -1,50 +1,73 @@
-<div class="formss">
+<div class="formssComp">
   <div id="wrapper">
-      <div id="box">
+      <div id="box">  
         <div class="header">
-          <h4>Sign In Below</h4>
+          <h4><strong>Enter Competition Details</strong></h4>
         </div>
-          <h6>USERNAME / EMAIL</h6>
-          <input type="text" placeholder="johndoe@email.com">
-          <h6>PASSWORD</h6>
-          <input type="password" placeholder="* * * * * * * * * * *">
-          <input type="submit">
+         
+
+
+
+          <%= form_for(@competition) do |f| %>
+              <% if @competition.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@competition.errors.count, "error") %> prohibited this competition from being saved:</h2>
+
+                  <ul>
+                  <% @competition.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+
+              <h5>EVENT NAME</h5>
+              <%= f.email_field :name, autofocus: true, class: "form-control" , :placeholder => "eg. Quizzical", :autocomplete => :off%>
+
+              <h5>EVENT CATEGORY</h5>
+              <%= f.text_field :category, class: "form-control" , :placeholder => "Quiz", :autocomplete => :off%>
+              
+
+              <h5>BRIEF DESCRIPTION</h5>
+              <%= f.text_field :description, class: "form-control" , :placeholder => "A Bussiness and Economy Quiz", :autocomplete => :off%>
+
+             
+
+
+              <h5>COLLEGE / COMPANY NAME</h5>
+              <%= f.text_field :collegename, class: "form-control" , :placeholder => "Adobe"%>
+
+              <h5>ORGANIZED BY [Fest name/Club name/Fete name]</h5>
+              <%= f.text_field :organizedBy, class: "form-control",  :placeholder => "The Quiz Club at Adobe" %>
+
+              <h5>LOCATION</h5>
+              <%= f.text_field :location, class: "form-control" %>
+
+              <h5>ONLINE/OFFLINE EVENT</h5>
+              <%= f.text_field :onOff, class: "form-control" %>
+
+              <h5>TOTAL PRIZE MONEY</h5>
+              <%= f.number_field :money, class: "form-control", :placeholder => "The moe the merrierr" %>
+
+              <h5>WEBSITE</h5>
+              <%= f.text_field :linkWebsite, class: "form-control", :placeholder => "Enter the link of the events website"%>
+
+              <h5>FB PAGE</h5>
+              <%= f.text_field :linkFb, class: "form-control", :placeholder => "Enter the link of the events FB page" %>
+
+              <h5>STARTS AT</h5>
+              <%= f.datetime_select :startDate, :ampm => true, :minute_step => 30 %>
+
+              <h5>ENDS AT</h5>
+              <%= f.datetime_select :endDate, :ampm => true, :minute_step => 30 %>
+
+              <%= f.submit class: "btn btn-primary" %>
+
+
+    
+          <% end %>
+
       </div>
     </div>
 </div>
-
-<h2 class="mainHead center"><strong>Enter Competition Details</strong></h2>
-<hr>
-
-
-<div class="formCreate">
-  <%= simple_form_for(@competition) do |f| %>
-        <% if @competition.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@competition.errors.count, "error") %> prohibited this competition from being saved:</h2>
-
-            <ul>
-            <% @competition.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-
-
-    <%= f.input :name %>
-
-    <%= f.input :description  %>
-    <%= f.input :category  %>
-    <%= f.input :collegename  %>
-    <%= f.input :money  %>
-    
-        
-    <button type="submit">Create</button>
-
-    
-  <% end %>
-</div>
-
-
-

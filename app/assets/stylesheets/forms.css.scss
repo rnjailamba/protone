@@ -260,6 +260,173 @@ input[type="submit"]:hover {
 
 
 }
+/*formssComp*/
+.formssComp{
+  body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  margin-top: 50px;
+  letter-spacing: 0.4px;
+}
+
+input {
+  outline: none;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#box {
+
+  width: 800px;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 3px;
+  border: 1px solid #ededed;
+  margin-top: 50px;
+
+}
+#bottom {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  letter-spacing: 0.4px;
+}
+
+.header > h4{
+  text-align: center;
+  padding-top: 38px;
+  color: #8f95a1;
+  margin: 0;
+  font-family: 'Lato', sans-serif;;
+  font-weight: 300;
+  font-size: 23px;
+}
+.right_a {
+  float: right;
+}
+
+h5 {
+
+  margin: 0;
+  width: auto;
+  height: 10px;
+  background-color: #fff;
+  padding: 20px 35px;
+  color: #8f95a1;
+  border-top: 1px solid #ededed;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+h6 {
+  margin: 0;
+  width: auto;
+  height: 10px;
+  background-color: #fff;
+  padding: 20px 35px;
+  color: #a9b0c0;
+  border-top: 1px solid #ededed;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+[placeholder]::-webkit-input-placeholder {
+  coler:white;
+  opacity: 0;
+  transition: opacity 0s 0s ease; 
+  
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  color: #3498db;
+  opacity: 1;
+ transition: text-indent 2s 2s ease; 
+  text-indent: -100%;
+  
+}
+
+
+
+input[type="text"], input[type="password"],input[type="email"],input[type="datetime"],
+input[type="number"]{
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  padding: 0 35px;
+  box-sizing: border-box;
+  font-family: serif;
+  color: #3498db;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+   border-radius: 0px;
+   margin-top:0px;
+   border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus,input[type="email"]:focus ,input[type="datetime"]:focus,
+input[type="number"]:focus{
+  border-left: 3px solid #fe655d;
+  -webkit-transition: border .2s ease;
+  -moz-transition: border .2s ease;
+  -o-transition: border .2s ease;
+  transition: border .2s ease;
+}
+
+input[type="password"] {
+  border-bottom: 1px solid #ededed;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="submit"] {
+  background-color: #fe655d;
+  border: none;
+  height: 60px;
+  width: 310px;
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  margin: 30px auto;
+  border: 1px solid #e0514b;
+  border-radius: 3px;
+  transition: all .2s ease;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+input[type="submit"]:hover {
+  background-color: #e0514b;
+  border: 1px solid #fe655d;
+}
+
+
+
+}
 
 .forgotform{
 

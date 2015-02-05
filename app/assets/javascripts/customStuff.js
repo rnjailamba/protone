@@ -1,0 +1,3 @@
+$(function(){
+  $(".Fname").focus();
+});
