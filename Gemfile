@@ -29,6 +29,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'simple_form'
 gem "jquery-ui-rails"
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
