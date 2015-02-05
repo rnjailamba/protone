@@ -15,6 +15,35 @@ $jumbotron-bg:                                         white;
 
 
 /* universal*/
+.container{
+  a:hover{
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-sizing:none;
+ background-color: transparent;
+
+
+}
+  /* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+}
 
 .mainContent{
   
@@ -28,6 +57,10 @@ body {
   text-rendering: optimizelegibility;
 }
 
+a { 
+    color: #FFF;
+
+}
 
 section {
   
