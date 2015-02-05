@@ -8,7 +8,7 @@
             <%= devise_error_messages! %>
 
             
-              <h6>USERNAME / EMAIL</h6>
+              <h6>EMAIL</h6>
               <%= f.email_field :email, class: "form-control" %>
             
 
@@ -16,12 +16,8 @@
               <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
             
           <% end %>
-  
-
-        <%= render "devise/shared/links" %>
+        
        </div>
     </div> 
 </div>
-
-
 

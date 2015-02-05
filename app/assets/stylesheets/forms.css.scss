@@ -153,17 +153,22 @@ input {
 }
 
 #box {
-  position: fixed;
-  left: 50%;
-  top: 40%;
-  width: 350px;
-  height: auto;
-  margin: 0 auto;
-  margin-left: -170px;
-  margin-top: -150px;
+
+  width: 345px;
   background-color: #f7f7f7;
-  border: 1px solid #ededed;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 3px;
+  border: 1px solid #ededed;
+  margin-top: 50px;
+
+}
+#bottom {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .header {
@@ -179,7 +184,9 @@ input {
   font-family: 'Lato', sans-serif;;
   font-weight: 300;
 }
-
+.right_a {
+  float: right;
+}
 
 
 h6 {
@@ -268,7 +275,6 @@ input[type="submit"]:hover {
 
 #box {
   width: 345px;
-  height: 450px;
   background-color: #fff;
   margin: 0 auto;
   -webkit-border-radius: 4px;
