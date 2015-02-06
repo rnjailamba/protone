@@ -26,8 +26,36 @@
               <%= f.text_field :name, autofocus: true, class: "form-control" , :placeholder => "eg. Quizzical", :autocomplete => :off%>
 
               <h5>EVENT CATEGORY</h5>
-              <input class="form-control" placeholder="Quiz" autocomplete="off" type="text" name="competition[category]" id="competition_category">
+
               
+              
+                <div class="btn-group btn-input clearfix">
+                   <button type="button" class="btn btn-default dropdown-toggle form-control"  data-toggle="dropdown">
+                      <div class="selectText">
+                        <span data-bind="label" >Select One</span>&nbsp;<span class="caret"></span>
+                      </div>
+                   </button>
+                   <ul class="dropdown-menu" role="menu">
+                     
+                              <li><a >Board Games</a></li>
+
+                              <li><a >Dance</a></li>
+                              <li><a >Design</a></li>
+                              <li><a >Debate</a></li>
+                              <li><a >Electronics Design </a></li>
+                              <li><a >Music</a></li>                             
+                              <li><a >MUN</a></li>
+                              <li><a >Programming</a></li>
+                              <li><a >Quiz</a></li>
+                              <li><a >Robotics</a></li>
+                              <li><a >Sports</a></li>
+                              <li><a >Technical Paper Presentation</a></li>
+                              <li role="presentation" class="divider"></li>
+                              <li><a >Misscelaneous</a></li>
+                   </ul>
+
+                 </div>
+                 <input type="hidden" class="form-control" name="competition[category]" id="competition_category"/>      
 
               <h5>BRIEF DESCRIPTION</h5>
               <%= f.text_field :description, class: "form-control" , :placeholder => "A Bussiness and Economy Quiz", :autocomplete => :off%>
@@ -42,7 +70,17 @@
               <%= f.text_field :organizedBy, class: "form-control",  :placeholder => "The Quiz Club at Adobe  |  [Fest name/Club name/Fete name]" %>
 
               <h5>LOCATION</h5>
-              <%= f.text_field :location, class: "form-control" %>
+              <input class="form-control" type="text" name="competition[location]" id="competition_location">
+
+              <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU"></script>
+              <script>
+                  var autocomplete = new google.maps.places.Autocomplete($("#competition_location")[0], {});
+
+                  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                      var place = autocomplete.getPlace();
+                      console.log(place.address_components);
+                  });
+              </script>
 
               <h5>ONLINE/OFFLINE EVENT</h5>
               <%= f.text_field :onOff, class: "form-control" %>
@@ -74,3 +112,7 @@
      
     </div>
 </div>
+
+
+
+             

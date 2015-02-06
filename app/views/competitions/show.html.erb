@@ -1,4 +1,68 @@
+		<div class = "row">
+			<div class="col-md-offset-2 col-md-8">
+			  <div class="panel panel-default">
+		      	<div class="panel-heading center">
+					<p>
+					  <strong>Name:</strong>
+					  <%= @competition.name %>
+					</p>
+				</div>
+				<div class="panel-body">
+					<p>
+					  <strong>Description:</strong>
+					  <%= @competition.description %>
+					</p>
+					<p>
+					  <strong>Category:</strong>
+					  <%= @competition.category %>
+					</p>
 
+					<p>
+					  <strong>Collegename:</strong>
+					  <%= @competition.collegename %>
+					</p>
+
+					<p>
+					  <strong>location:</strong>
+					  <%= @competition.location %>
+					</p>
+					<p>
+					  <strong>onOff:</strong>
+					  <%= @competition.onOff %>
+					</p>
+					<p>
+					  <strong>linkWebsite:</strong>
+					  <%= @competition.linkWebsite %>
+					</p>
+					<p>
+					  <strong>linkFb:</strong>
+					  <%= @competition.linkFb %>
+					</p>
+					<p>
+					  <strong>organizedBy:</strong>
+					  <%= @competition.organizedBy %>
+					</p>
+					<p>
+					  <strong>startDate:</strong>
+					  <%= @competition.startDate %>
+					</p>
+
+					<p>
+					  <strong>endDate:</strong>
+					  <%= @competition.endDate %>
+					</p>
+
+
+
+
+					<% if @competition.user == current_user %>
+					  <%= link_to 'Edit', edit_competition_path(@competition)%>
+					<% end %>
+				</div>
+
+			   </div>
+			</div>
+		</div>
 <div class="row" id="moreInfo">
 	<div class="col-sm-6">
 		<h3>Neat Tabbable Content</h3>
@@ -35,42 +99,7 @@
 				</div><!-- end tab-pane -->
 			</div><!-- end tab-content -->
 		</div><!-- end tabbable -->
-		<div class = "row">
-			<div class="col-md-offset-2 col-md-8">
-			  <div class="panel panel-default">
-		      	<div class="panel-heading center">
-					<p>
-					  <strong>Name:</strong>
-					  <%= @competition.name %>
-					</p>
-				</div>
-				<div class="panel-body">
-					<p>
-					  <strong>Description:</strong>
-					  <%= @competition.description %>
-					</p>
-					<p>
-					  <strong>Category:</strong>
-					  <%= @competition.category %>
-					</p>
 
-					<p>
-					  <strong>Collegename:</strong>
-					  <%= @competition.collegename %>
-					</p>
-
-					<p>
-					  <strong>Money:</strong>
-					  <%= @competition.money %>
-					</p>
-					<% if @competition.user == current_user %>
-					  <%= link_to 'Edit', edit_competition_path(@competition)%>
-					<% end %>
-				</div>
-
-			   </div>
-			</div>
-		</div>
 	</div>
 	<div class="col-sm-6">
 		<h3>Some Text Info</h3>
