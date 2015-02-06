@@ -38,8 +38,8 @@
               <h5>COLLEGE / COMPANY NAME</h5>
               <%= f.text_field :collegename, class: "form-control" , :placeholder => "Adobe"%>
 
-              <h5>ORGANIZED BY [Fest name/Club name/Fete name]</h5>
-              <%= f.text_field :organizedBy, class: "form-control",  :placeholder => "The Quiz Club at Adobe" %>
+              <h5>ORGANIZED BY</h5>
+              <%= f.text_field :organizedBy, class: "form-control",  :placeholder => "The Quiz Club at Adobe  |  [Fest name/Club name/Fete name]" %>
 
               <h5>LOCATION</h5>
               <%= f.text_field :location, class: "form-control" %>
@@ -56,8 +56,10 @@
               <h5>FB PAGE</h5>
               <%= f.text_field :linkFb, class: "form-control", :placeholder => "Enter the link of the events FB page" %>
 
-              <h5>STARTS AT</h5>
-              <%= f.datetime_select :startDate, :ampm => true, :minute_step => 30 %>
+              
+               <h5>STARTS AT</h5>
+                <%= f.datetime_select :startDate, :ampm => true, :minute_step => 30 %>
+             
 
               <h5>ENDS AT</h5>
               <%= f.datetime_select :endDate, :ampm => true, :minute_step => 30 %>
@@ -69,5 +71,6 @@
           <% end %>
 
       </div>
+     
     </div>
 </div>
