@@ -1,21 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg:                     #ecf0f1;
+$font-family-sans-serif:      'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:               45px;
+$navbar-default-bg:           white;
+$navbar-default-brand-color:  #c0392b;
+$brand-primary:               #c0392b;
+$jumbotron-bg:                white;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-datetimepicker";
 
+.center {
+  text-align: center;
+}
 
-
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-
-$body-bg:                                                   #e0f0f1;
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height:                                        45px;
-$navbar-default-bg:                          white;
-$navbar-default-brand-color:      #c0392b;
-$brand-primary:                                    #c0392b;
-$jumbotron-bg:                                         white;
-
+.navbar-brand {
+  font-weight: bold;
+}
 
 /* universal*/
+body {
+  background-color: #ecf0f1;
+}
 .container{
   a:hover{
 
