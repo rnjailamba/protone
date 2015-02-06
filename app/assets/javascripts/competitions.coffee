@@ -2,9 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+ready = ->
+ 
+    $('#comp').masonry
+      isFitWidth: true
+      itemSelector: '.masonry-item'
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
 
 
 
-$(document).ready ->
-  console.log 'ready!'
-  return
