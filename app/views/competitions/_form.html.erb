@@ -35,7 +35,7 @@
                         <span data-bind="label" >Select One</span>&nbsp;<span class="caret"></span>
                       </div>
                    </button>
-                   <ul class="dropdown-menu" role="menu">
+                   <ul class="dropdown-menu categ" role="menu">
                      
                               <li><a >Board Games</a></li>
                               <li><a >Bussiness Plan</a></li>
@@ -60,9 +60,7 @@
               <h5>BRIEF DESCRIPTION</h5>
               <%= f.text_field :description, class: "form-control" , :placeholder => "A Bussiness and Economy Quiz", :autocomplete => :off%>
 
-             
-
-
+            
               <h5>COLLEGE / COMPANY NAME</h5>
               <%= f.text_field :collegename, class: "form-control" , :placeholder => "Adobe",:autocomplete => :off%>
 
@@ -72,13 +70,28 @@
               <h5>LOCATION</h5>
               <input class="form-control" type="text" name="competition[location]" id="competition_location">
 
+              <h5>ONLINE/ONSITE EVENT</h5>
+              <div class="btn-group btn-input clearfix">
+                   <button type="button" class="btn btn-default dropdown-toggle form-control"  data-toggle="dropdown">
+                      <div class="selectText">
+                        <span data-bind="label" >Select</span>&nbsp;<span class="caret"></span>
+                      </div>
+                   </button>
+                   <ul class="dropdown-menu onOff" role="menu">
+                              
+                              <li><a >Online</a></li>
+                              <li><a >Onsite</a></li>
+                              
+                   </ul>
 
+                 </div>
+              <input type="hidden" class="form-control" name="competition[onOff]" id="competition_onOff"/>  
 
-              <h5>ONLINE/OFFLINE EVENT</h5>
-              <%= f.text_field :onOff, class: "form-control",:autocomplete => :off %>
-
-              <h5>TOTAL PRIZE MONEY</h5>
-              <%= f.number_field :money, class: "form-control", :placeholder => "The moe the merrierr" %>
+              <h5>TOTAL PRIZE MONEY[Rupees]</h5>
+              <div class="prizeMoney">
+                <input class="form-control"  type="number" name="competition[money]" id="competition_money"
+                    min="0" max="100000" step="1000" maxlength="6" >
+              </div>
 
               <h5>WEBSITE</h5>
               <%= f.text_field :linkWebsite, class: "form-control", :placeholder => "Enter the link of the events website"%>
@@ -88,11 +101,15 @@
 
               
                <h5>STARTS AT</h5>
-                <%= f.datetime_select :startDate, :ampm => true, :minute_step => 30 %>
-             
+               <div class="x">
+                  <input type='text' class="form-control" id='datetimepicker6'/>
+              </div>
+
 
               <h5>ENDS AT</h5>
-              <%= f.datetime_select :endDate, :ampm => true, :minute_step => 30 %>
+              <div class="x">
+                  <input type='text' class="form-control" id='datetimepicker7'/>
+              </div>
 
               <%= f.submit class: "btn btn-primary" %>
 
