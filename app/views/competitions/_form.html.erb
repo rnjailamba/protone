@@ -4,7 +4,7 @@
         <div class="header">
           <h4><strong>Enter Competition Details</strong></h4>
         </div>
-         
+          
 
 
 
@@ -38,20 +38,20 @@
                    <ul class="dropdown-menu" role="menu">
                      
                               <li><a >Board Games</a></li>
-
+                              <li><a >Bussiness Plan</a></li>
                               <li><a >Dance</a></li>
                               <li><a >Design</a></li>
                               <li><a >Debate</a></li>
                               <li><a >Electronics Design </a></li>
-                              <li><a >Music</a></li>                             
                               <li><a >MUN</a></li>
+                              <li><a >Music</a></li>                                
                               <li><a >Programming</a></li>
                               <li><a >Quiz</a></li>
                               <li><a >Robotics</a></li>
                               <li><a >Sports</a></li>
                               <li><a >Technical Paper Presentation</a></li>
                               <li role="presentation" class="divider"></li>
-                              <li><a >Misscelaneous</a></li>
+                              <li><a >Miscellaneous</a></li>
                    </ul>
 
                  </div>
@@ -64,26 +64,18 @@
 
 
               <h5>COLLEGE / COMPANY NAME</h5>
-              <%= f.text_field :collegename, class: "form-control" , :placeholder => "Adobe"%>
+              <%= f.text_field :collegename, class: "form-control" , :placeholder => "Adobe",:autocomplete => :off%>
 
               <h5>ORGANIZED BY</h5>
-              <%= f.text_field :organizedBy, class: "form-control",  :placeholder => "The Quiz Club at Adobe  |  [Fest name/Club name/Fete name]" %>
+              <%= f.text_field :organizedBy, class: "form-control",  :placeholder => "The Quiz Club at Adobe  |  [Fest name/Club name/Fete name]" ,:autocomplete => :off%>
 
               <h5>LOCATION</h5>
               <input class="form-control" type="text" name="competition[location]" id="competition_location">
 
-              <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU"></script>
-              <script>
-                  var autocomplete = new google.maps.places.Autocomplete($("#competition_location")[0], {});
 
-                  google.maps.event.addListener(autocomplete, 'place_changed', function() {
-                      var place = autocomplete.getPlace();
-                      console.log(place.address_components);
-                  });
-              </script>
 
               <h5>ONLINE/OFFLINE EVENT</h5>
-              <%= f.text_field :onOff, class: "form-control" %>
+              <%= f.text_field :onOff, class: "form-control",:autocomplete => :off %>
 
               <h5>TOTAL PRIZE MONEY</h5>
               <%= f.number_field :money, class: "form-control", :placeholder => "The moe the merrierr" %>

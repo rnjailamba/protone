@@ -55,13 +55,16 @@ j(function() {
    });
 
 /*Google Maps*/
-
+j(document).ready(function() {
     var autocomplete = new google.maps.places.Autocomplete(j("#competition_location")[0], {});
 
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
         var place = autocomplete.getPlace();
         console.log(place.address_components);
     });
+});
+
+    
 
 
 

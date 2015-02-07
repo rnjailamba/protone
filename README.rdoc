@@ -2,3 +2,5 @@ Before heroku
 bundle exec rake assets:precompile
 
 rake assets:precompile RAILS_ENV=production
+
+New fields in the model=>do the permit
