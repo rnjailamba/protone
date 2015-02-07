@@ -384,6 +384,7 @@ h6 {
   coler:red;
   opacity: 0;
   transition: opacity 0s 0s ease; 
+  font-weight:10;
   
 }
 [placeholder]:focus::-webkit-input-placeholder {
@@ -391,6 +392,7 @@ h6 {
   opacity: 1;
   transition: text-indent 0s 0s ease; 
   text-indent: -100%;
+  font-weight:100;
   
 }
 }

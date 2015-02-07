@@ -1,132 +1,77 @@
-		<div class = "row">
-			<div class="col-md-offset-2 col-md-8">
-			  <div class="panel panel-default">
-		      	<div class="panel-heading center">
-					<p>
-					  <strong>Name:</strong>
-					  <%= @competition.name %>
-					</p>
-				</div>
-				<div class="panel-body">
-					<p>
-					  <strong>Description:</strong>
-					  <%= @competition.description %>
-					</p>
-					<p>
-					  <strong>Category:</strong>
-					  <%= @competition.category %>
-					</p>
-
-					<p>
-					  <strong>Collegename:</strong>
-					  <%= @competition.collegename %>
-					</p>
-
-					<p>
-					  <strong>location:</strong>
-					  <%= @competition.location %>
-					</p>
-					<p>
-					  <strong>onOff:</strong>
-					  <%= @competition.onOff %>
-					</p>
-					<p>
-					  <strong>linkWebsite:</strong>
-					  <%= @competition.linkWebsite %>
-					</p>
-					<p>
-					  <strong>linkFb:</strong>
-					  <%= @competition.linkFb %>
-					</p>
-					<p>
-					  <strong>organizedBy:</strong>
-					  <%= @competition.organizedBy %>
-					</p>
-					<p>
-					  <strong>startDate:</strong>
-					  <%= @competition.startDateText %>
-					</p>
-
-					<p>
-					  <strong>endDate:</strong>
-					  <%= @competition.endDateText %>
-					</p>
-
-
-
-
-					<% if @competition.user == current_user %>
-					  <%= link_to 'Edit', edit_competition_path(@competition)%>
-					<% end %>
-				</div>
-
-			   </div>
-			</div>
-		</div>
+		
 <div class="row" id="moreInfo">
 	<div class="col-sm-6">
-		<h3>Neat Tabbable Content</h3>
+		<strong><h3><%= @competition.name %></h3></strong>
 		<div class="tabbable">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#tab2" data-toggle="tab">More Details</a></li>	
-				<li><a href="#tab1" data-toggle="tab">Where</a></li>
+				<li class="active"><a href="#tab1" data-toggle="tab">Where</a></li>	
+				<li><a href="#tab2" data-toggle="tab">More Details</a></li>
 						
 			</ul>
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab2">
-					<h4><span class="glyphicon glyphicon-map-marker"></span> Our Location <small>More like our favourite surf spot</small></h4>
-					
-					<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=waikiki+beach&amp;aq=&amp;sll=19.896766,-155.582782&amp;sspn=8.711424,11.854248&amp;ie=UTF8&amp;hq=&amp;hnear=Waikiki+Beach,+Honolulu,+Hawaii,+United+States&amp;t=m&amp;ll=21.277298,-157.8265&amp;spn=0.015996,0.036478&amp;z=14&amp;output=embed"></iframe>
-					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div><!-- end tab-pane -->
-				
-				<div class="tab-pane" id="tab1">
-					<h4>A Left Floated Picture <small>Using Placehold.it</small></h4>
+				<div class="tab-pane" id="tab2">
+					<h4>Logo</small></h4>
 					
 					<img src="http://placehold.it/140" class="thumbnail pull-left" alt="Placeholder image">
 					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					
 					<hr>
+					<p>The action starts at <%= @competition.startDateText %> </p>
 					
-					<a href="#myModal" role="button" class="btn btn-warning" data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span> Click for a Modal Window!</a>
 					
 				</div><!-- end tab-pane -->
+				<div class="tab-pane active" id="tab1">
+					<h4><span class="glyphicon glyphicon-map-marker"></span> Our Location </h4>
+					
+					<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?q=<%= @competition.location %>&output=embed"></iframe>
+					
+					<p><h4><%= @competition.location %></h4></p>
+				</div><!-- end tab-pane -->
+				
+				
 			</div><!-- end tab-content -->
 		</div><!-- end tabbable -->
 
 	</div>
 	<div class="col-sm-6">
-		<h3>Some Text Info</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<strong><h3><%= @competition.category %></h3></strong>
 		
-		<h4>A List Group</h4>
 		
 		<div class="list-group">
 			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Kale</h4>
-				<p class="list-group-item-text">Kale or borecole is a vegetable with green or purple leaves, in which the central leaves do not form a head.</p>
+				<h4 class="list-group-item-heading"><%= @competition.onOff %></h4>
+				
 			</a>
 			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Carrots</h4>
-				<p class="list-group-item-text">The carrot is a root vegetable, usually orange in colour, though purple, red, white, and yellow varieties exist. It has a crisp texture when fresh.</p>
+				<h4 class="list-group-item-heading"><%= @competition.description %></h4>
 			</a>
 			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Steel-cut oats</h4>
-				<p class="list-group-item-text">Steel-cut oats are whole grain groats which have been cut into pieces. They are commonly used in Scotland and Ireland to make porridge.</p>
+				<h4 class="list-group-item-heading">Organized By:
+					  <%= @competition.organizedBy %></h4>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">FB link:
+					  <%= @competition.linkFb %></h4>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Website:
+					  <%= @competition.linkWebsite %></h4>
 			</a>
 		</div><!-- list-group -->
 		
-		<h5>A small heading</h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
 	</div><!-- end col-sm-6 -->
 			
 </div>
 
-<%= link_to 'Back', competitions_path %>
+
+
+<button class="btn btn-warning" ><%= link_to 'Back', competitions_path %></button>
+<% if @competition.user == current_user %>
+			<button class="btn btn-warning" ><%= link_to 'Edit', edit_competition_path(@competition)%></button>		  
+<% end %>
+
+
+
 
