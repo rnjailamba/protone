@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205150218) do
+ActiveRecord::Schema.define(version: 20150207114404) do
 
   create_table "competitions", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "collegename"
     t.integer  "money"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
     t.string   "category"
     t.text     "moreDetails"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20150205150218) do
     t.string   "organizedBy"
     t.datetime "startDate"
     t.datetime "endDate"
+    t.text     "startDateText"
+    t.text     "endDateText"
   end
 
   add_index "competitions", ["category"], name: "index_competitions_on_category"

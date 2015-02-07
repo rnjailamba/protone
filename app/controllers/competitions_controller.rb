@@ -57,6 +57,6 @@ respond_to :html, :json
 
     def competition_params
       params.require(:competition).permit(:name,:category, :description, :collegename, 
-        :money, :onOff,:location,:startDate,:endDate,:organizedBy,:linkWebsite,:linkWebsite,:linkFb)
+        :money, :onOff,:location,:startDate,:endDate,:organizedBy,:linkWebsite,:linkWebsite,:linkFb,:startDateText,:endDateText)
     end
 end

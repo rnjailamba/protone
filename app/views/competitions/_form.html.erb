@@ -101,14 +101,19 @@
 
               
                <h5>STARTS AT</h5>
-               <div class="x">
-                  <input type='text' class="form-control" id='datetimepicker6'/>
+               
+              <div class="y">
+                  <div class="x">
+                      <input type='text' class="form-control" name="competition[startDateText]" id="competition_startDateText"/>
+                  </div>
               </div>
 
 
               <h5>ENDS AT</h5>
-              <div class="x">
-                  <input type='text' class="form-control" id='datetimepicker7'/>
+              <div class="y">
+                  <div class="x">
+                      <input type='text' class="form-control" name="competition[endDateText]" id="competition_endDateText"/>
+                  </div>
               </div>
 
               <%= f.submit class: "btn btn-primary" %>

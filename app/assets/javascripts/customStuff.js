@@ -1,22 +1,34 @@
 /*Date time Picker*/
 var j = jQuery.noConflict();
 j(document).ready(function(){
-    j('#datetimepicker6').datetimepicker({
+    j('#competition_startDateText').datetimepicker({
       sideBySide: true,
-      format: "dddd, MMMM Do YYYY, h a"
+      format: "MMMM Do YYYY, h a",
+       widgetPositioning: {
+        vertical: 'top',
+        horizontal: 'right'
+      }
+
       
     });
-    j('#datetimepicker7').datetimepicker({
+
+    
+    j('#competition_endDateText').datetimepicker({
       sideBySide: true,
-      format: "dddd, MMMM Do YYYY, h a"
+      format: "MMMM Do YYYY, h a",
+       widgetPositioning: {
+        vertical: 'top',
+        horizontal: 'right'
+      }
       
     });
-    j("#datetimepicker6").on("dp.change",function (e) {
-        j('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+    j("#competition_startDateText").on("dp.change",function (e) {
+        j('#competition_endDateText').data("DateTimePicker").minDate(e.date);
     });
-    j("#datetimepicker7").on("dp.change",function (e) {
-        j('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+    j("#competition_endDateText").on("dp.change",function (e) {
+        j('#competition_startDateText').data("DateTimePicker").maxDate(e.date);
     });
+
 })
 
 

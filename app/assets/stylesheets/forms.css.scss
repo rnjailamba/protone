@@ -277,6 +277,18 @@ input {
 
 .x{
   position:relative;
+  width:70%;
+  .btn-primary{
+   background-color:#428bca;
+   border-color:#428bca;
+  }
+}
+.y{
+  background-color:white;
+  position:relative;
+  width:100%;
+
+
 }
 
 #wrapper {
