@@ -7,3 +7,6 @@ RAILS_ENV=production bundle exec rake assets:precompile
 New fields in the model=>do the permit
 
 heroku db:reset to remove all stuff online.
+
+
+delete your /public/assets directory it should fix it.

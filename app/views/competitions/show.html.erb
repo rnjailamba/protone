@@ -1,76 +1,77 @@
-		
-<div class="row" id="moreInfo">
-	<div class="col-sm-6">
-		<strong><h3><%= @competition.name %></h3></strong>
-		<div class="tabbable">
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#tab1" data-toggle="tab">Where</a></li>	
-				<li><a href="#tab2" data-toggle="tab">More Details</a></li>
+<div class="container">
+	<div class="row" id="moreInfo">
+		<div class="col-sm-6">
+			<strong><h3><%= @competition.name %></h3></strong>
+			<div class="tabbable">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">Where</a></li>	
+					<li><a href="#tab2" data-toggle="tab">More Details</a></li>
+							
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane" id="tab2">
+						<h4>Logo</small></h4>
 						
-			</ul>
-			<div class="tab-content">
-				<div class="tab-pane" id="tab2">
-					<h4>Logo</small></h4>
+						<img src="http://placehold.it/140" class="thumbnail pull-left" alt="Placeholder image">
+						
+						
+						
+						<hr>
+						<p>The action starts at <%= @competition.startDateText %> </p>
+						
+						
+					</div><!-- end tab-pane -->
+					<div class="tab-pane active" id="tab1">
+						<h4><span class="glyphicon glyphicon-map-marker"></span> Our Location </h4>
+						
+						<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?q=<%= @competition.location %>&output=embed"></iframe>
+						
+						<p><h4><%= @competition.location %></h4></p>
+					</div><!-- end tab-pane -->
 					
-					<img src="http://placehold.it/140" class="thumbnail pull-left" alt="Placeholder image">
 					
-					
-					
-					<hr>
-					<p>The action starts at <%= @competition.startDateText %> </p>
-					
-					
-				</div><!-- end tab-pane -->
-				<div class="tab-pane active" id="tab1">
-					<h4><span class="glyphicon glyphicon-map-marker"></span> Our Location </h4>
-					
-					<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?q=<%= @competition.location %>&output=embed"></iframe>
-					
-					<p><h4><%= @competition.location %></h4></p>
-				</div><!-- end tab-pane -->
-				
-				
-			</div><!-- end tab-content -->
-		</div><!-- end tabbable -->
+				</div><!-- end tab-content -->
+			</div><!-- end tabbable -->
 
-	</div>
-	<div class="col-sm-6">
-		<strong><h3><%= @competition.category %></h3></strong>
-		
-		
-		<div class="list-group">
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading"><%= @competition.onOff %></h4>
-				
-			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading"><%= @competition.description %></h4>
-			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Organized By:
-					  <%= @competition.organizedBy %></h4>
-			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">FB link:
-					  <%= @competition.linkFb %></h4>
-			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Website:
-					  <%= @competition.linkWebsite %></h4>
-			</a>
-		</div><!-- list-group -->
-		
-		
-	</div><!-- end col-sm-6 -->
+		</div>
+		<div class="col-sm-6">
+			<strong><h3><%= @competition.category %></h3></strong>
 			
+			
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading"><%= @competition.onOff %></h4>
+					
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading"><%= @competition.description %></h4>
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">Organized By:
+						  <%= @competition.organizedBy %></h4>
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">FB link:
+						  <%= @competition.linkFb %></h4>
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">Website:
+						  <%= @competition.linkWebsite %></h4>
+				</a>
+			</div><!-- list-group -->
+			
+			
+		</div><!-- end col-sm-6 -->
+				
+	</div>
+
+
+
+	<button class="btn btn-warning" ><%= link_to 'Back', competitions_path %></button>
+	<% if @competition.user == current_user %>
+				<button class="btn btn-warning" ><%= link_to 'Edit', edit_competition_path(@competition)%></button>		  
+	<% end %>
 </div>
-
-
-
-<button class="btn btn-warning" ><%= link_to 'Back', competitions_path %></button>
-<% if @competition.user == current_user %>
-			<button class="btn btn-warning" ><%= link_to 'Edit', edit_competition_path(@competition)%></button>		  
-<% end %>
 
 
 
