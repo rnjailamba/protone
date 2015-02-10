@@ -16,7 +16,7 @@
   <![endif]-->
 </head>
 <body>
-	<%= render 'layouts/header' %>
+	<%= render "layouts/header" unless @skip_header %>
   <div class="flash-message">
     <% flash.each do |name, msg| %>
        <%= content_tag(:div, msg, class: "alert alert-success alert-block fade in") %>
@@ -27,7 +27,7 @@
           <%= yield %>
 
   </div>
-  <%= render 'layouts/footer' %>
+  <%= render "layouts/footer" unless @skip_footer %>
 
 
 
