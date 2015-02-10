@@ -1,12 +1,18 @@
-<nav class="navbar navbar-static-top navbar-default global-head" role="navigation">
-  <div class="container">
+<nav class="navbar navbar-default">
+  <div class="container container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a class="navbar-brand" href="/">CMPETE!</a>
     </div>
     <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search competions">
+          <input type="text" class="form-control" placeholder="Search competitions">
         </div>
        
     </form>
@@ -23,6 +29,15 @@
 
         <% if user_signed_in? %>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Me<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Saved Contests</a></li>
+            <li><a href="#">Registered Contests</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Created Events</a></li>
+          </ul>
+        </li>
         <% else %>
           <li><a href="/users/sign_up">Sign up</a></li>
           <li><a href="/users/sign_in">Log in</a></li>
@@ -32,4 +47,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
