@@ -8,10 +8,20 @@
 /.bundle
 
 # Ignore the default SQLite database.
+.bundle
 /db/*.sqlite3
-/db/*.sqlite3-journal
+/log/*.log
+/tmp
+config/database.yml
+config/google_analytics.yml
+.DS_Store
+/nbproject/
+public/assets/**
 
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+
+
+/
