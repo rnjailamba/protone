@@ -108,17 +108,28 @@ j(document).ready(function() {
 });
 
 
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
+/*Access code*/
+j( document).on( 'click', '.letMeIn', function( event ) {
 
 
-// Floating label headings for the contact form
+  
+  
+  var entry = j('#accessCode').val();
+  console.log(entry);
+  if (entry == "e") {
+    window.location="/competitions";
+    return false;
 
+  }
+  else
+  {
+    alert("Retry the code you were sent");
+      return true;
+  }
+
+  
+
+});
     
 
 
