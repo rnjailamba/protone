@@ -10,3 +10,8 @@ heroku db:reset to remove all stuff online.
 
 
 delete your /public/assets directory it should fix it.
+
+To debug rails routes puts #variable name 
+
+
+Debug railstutorial

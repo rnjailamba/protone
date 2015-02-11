@@ -1,4 +1,5 @@
 class CompetitionsController < ApplicationController
+  before_filter :store_location
   before_action :set_competition, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show] 
   before_action :correct_user, only: [:edit, :update, :destroy]
